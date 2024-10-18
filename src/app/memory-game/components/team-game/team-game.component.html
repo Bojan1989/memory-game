@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="selection" *ngIf="team1===undefined && team2===undefined">
+    
+        <div class="header">
+    
+            Prvo igraju 
+        </div>
+    
+        <div class="buttons">
+            <p-button label="Loknice" severity="success"(onClick)="setTeam('Loknice')" />
+            <p-button label="Pilice" severity="warning" (onClick)="setTeam('Pilice')"/>
+        </div>
+    
+    
+    </div>
+  <div class="scoreboard" *ngIf="team1!==undefined && team2!==undefined">
+    <div class="team">
+      <div class="team-name">
+        <p [ngClass]="team1?.active ? 'glow' : ''">
+          {{ team1.name }}
+        </p>
+      </div>
+      <div class="team-score">
+        <p [ngClass]="team1?.active ? 'glow' : ''">
+            {{ team1.score }}
+        </p>
+      </div>
+    </div>
+
+    <div>-</div>
+    <div class="team">
+      <div class="team-score">
+        <p [ngClass]="team2?.active ? 'glow' : ''">
+            {{ team2.score }}
+        </p>
+      </div>
+
+      <div class="team-name">
+        <p [ngClass]="team2?.active ? 'glow' : ''">
+            {{ team2.name }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tiles-wrapper" *ngIf="team1!==undefined && team2!==undefined">
+    <div class="tiles">
+      <div
+        *ngFor="let card of cards; let i = index"
+        class="card-wrapper"
+        (click)="handleCardClick(card)"
+      >
+        <div [id]="card?.index" class="card show"></div>
+        <div [id]="'img-' + card?.index" class="img show">
+          <p-image
+            [src]="'../../assets/images/cards/' + card.src + '.png'"
+            alt="Image"
+            height="78"
+            width="58"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

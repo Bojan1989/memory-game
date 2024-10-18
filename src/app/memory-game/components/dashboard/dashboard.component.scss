@@ -1,0 +1,33 @@
+.container {
+  padding: 20px 10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../../../assets/images/pilica-bg.jpg");
+  background-size: contain;
+  
+  .header {
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6d32a8;
+    text-shadow: 2px 2px 4px #000000;
+
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    ::ng-deep .p-button {
+      width: 300px;
+      text-shadow: 2px 2px 4px #000000;
+      box-shadow: 2px 2px 4px #918c44;
+
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.container {
+  background-image: url("../../../../assets/images/pilica-bg.jpg");
+  background-size: contain;
+  padding: 10px 5px;
+  caret-color: transparent;
+
+  .scoreboard {
+    width: 100%;
+    padding: 3px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    caret-color: transparent;
+
+    .team {
+      width: 45%;
+      display: flex;
+      justify-content: space-between;
+      caret-color: transparent;
+
+      .team-name {
+        p {
+
+            margin: 0;
+            font-size: 20px;
+            font-weight: 700;
+            background: -webkit-linear-gradient(#57399c, #3385a2 );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+      }
+
+      .team-score {
+        p {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 700;
+            background: -webkit-linear-gradient(#57399c, #3385a2 );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }      }
+    }
+  }
+
+  .tiles-wrapper {
+    padding: 10px 5px;
+
+    display: flex;
+    justify-content: center;
+
+    .tiles {
+      height: 100%;
+      width: 320px;
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 5px;
+      align-content: start;
+      caret-color: transparent;
+
+      .card-wrapper {
+        min-width: 60px;
+        height: 80px;
+        position: relative;
+        caret-color: transparent;
+        overflow: hidden;
+        border-radius: 5px;
+
+        .img {
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+          border: 2px ridge rgba(151, 170, 177, 0.6);
+          overflow: hidden;
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          caret-color: transparent;
+        }
+        .card {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: rgb(63, 171, 251);
+          background: radial-gradient(
+            circle,
+            rgba(63, 171, 251, 1) 0%,
+            rgba(7, 29, 148, 1) 100%
+          );
+          background-size: contain;
+          box-sizing: border-box;
+          border: 2px ridge rgba(65, 72, 74, 0.6);
+          z-index: 9;
+          caret-color: transparent;
+        }
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block !important;
+  }
+
+  .glow{
+    text-shadow: 0px 0px 30px blue,0px 0px 30px blue,0px 0px 30px blue,0px 0px 10px #fdfdfd,0px 0px 10px #ffffff;
+  }
+
+
+  .selection {
+    padding: 20px 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .header {
+      margin-bottom: 50px;
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #6d32a8;
+      text-shadow: 2px 2px 4px #000000;
+  
+    }
+  
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+  
+      ::ng-deep .p-button {
+        width: 300px;
+        text-shadow: 2px 2px 4px #000000;
+        box-shadow: 2px 2px 4px #918c44;
+  
+      }
+    }
+  }
+
+
+}
